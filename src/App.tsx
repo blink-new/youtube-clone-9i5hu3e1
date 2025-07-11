@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Sidebar } from './components/Sidebar'
 import { Header } from './components/Header'
 import { Home } from './pages/Home'
-import { VideoWatch } from './pages/VideoWatch'
-import { Upload } from './pages/Upload'
-import { Search } from './pages/Search'
-import { Channel } from './pages/Channel'
+import VideoPage from './pages/VideoPage'
+import UploadPage from './pages/UploadPage'
+import SearchPage from './pages/SearchPage'
+import ChannelPage from './pages/ChannelPage'
 import { cn } from './lib/utils'
 
 function App() {
@@ -36,10 +36,10 @@ function App() {
           <main className="flex-1 overflow-y-auto">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/watch/:id" element={<VideoWatch />} />
-              <Route path="/upload" element={<Upload />} />
-              <Route path="/search" element={<Search />} />
-              <Route path="/channel/:id" element={<Channel />} />
+              <Route path="/watch" element={<VideoPage />} />
+              <Route path="/upload" element={<UploadPage />} />
+              <Route path="/search" element={<SearchPage />} />
+              <Route path="/channel/:id" element={<ChannelPage />} />
             </Routes>
           </main>
         </div>
